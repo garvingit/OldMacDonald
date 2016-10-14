@@ -1,5 +1,6 @@
 class Chick implements Animal {     
-     private String myType;      
+     private String myType;
+     private int oneortwo = (int)(Math.random()*2);      
      private String[] mySound = new String[2];
      public Chick(String type, String sound, String sound2)     {         
          myType = type;         
@@ -12,6 +13,6 @@ class Chick implements Animal {
          mySound[0] = "unknown";    
          mySound[1] = "unknown";  
      }      
-     public String getSound(){return mySound[(int)(Math.random()*2)];}     
+     public String getSound(){return mySound[oneortwo];}     
      public String getType(){return myType;} 
 }
